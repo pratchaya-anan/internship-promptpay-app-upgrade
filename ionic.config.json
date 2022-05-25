@@ -1,0 +1,7 @@
+{
+  "name": "promptpay-app-upgrade",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
