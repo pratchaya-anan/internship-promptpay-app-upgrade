@@ -1,0 +1,35 @@
+<ion-content mode="ios">
+    <ion-list>
+        <form [formGroup]="fg" (ngSubmit)="onSave()">
+            <ion-item lines="full" color="tertiary">
+                <ion-label position="stacked">ชื่อผู้รับเงิน
+                </ion-label>
+                <ion-input type="text" formControlName="name"></ion-input>
+            </ion-item>
+            <ion-item lines="full" color="tertiary">
+                <ion-label position="stacked">เบอร์ผู้รับ
+                </ion-label>
+                <ion-input type="tel" formControlName="phoneNumber"></ion-input>
+            </ion-item>
+            <ion-button color="danger" class="ion-margin" type="submit" fill="outline">
+                <ion-icon slot="start" name="cloud-upload"></ion-icon>
+                บันทึกข้อมูล
+            </ion-button>
+
+            <!-- <ion-button color="primary" class="ion-margin" type="button" fill="outline" (click)="onLoad()">
+                <ion-icon slot="start" name="cloud-download"></ion-icon>
+                ดึงข้อมูลที่จดจำ
+            </ion-button> -->
+
+            <!-- <ion-button color="dark" class="ion-margin" type="reset" fill="outline">
+                <ion-icon slot="start" name="trash"></ion-icon>
+                ลบข้อมูลในฟอร์มทิ้ง
+            </ion-button> -->
+        </form>
+    </ion-list>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-button color="danger" class="ion-no-margin" expand="full" type="submit" [routerLink]="['/home']">กลับไปหน้าหลัก
+    </ion-button>
+</ion-footer>

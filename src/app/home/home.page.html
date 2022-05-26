@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content mode="ios">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list lines="none">
+        <ion-list-header lines="none" mode="md">
+            <ion-label>เลือกรายการ</ion-label>
+        </ion-list-header>
+        <ion-item button class="ion-margin-bottom" color="tertiary" *ngFor="let item of data" (click)="onSelectItem(item)">
+            <ion-avatar slot="start">
+                <img src="assets/imgs/defaultshop.png" />
+            </ion-avatar>
+            <ion-label>
+                <b> {{ item.name }} </b>
+                <ion-text color="medium">
+                    <h3> {{ item.phoneNumber }} </h3>
+                </ion-text>
+            </ion-label>
+        </ion-item>
+    </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button color="danger" class="ion-no-margin" expand="full" type="submit" [routerLink]="['/add-account']">เพิ่มบัญชี
+    </ion-button>
+</ion-footer>

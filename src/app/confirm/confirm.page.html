@@ -1,0 +1,25 @@
+<ion-content mode="ios">
+
+    <ion-list>
+        <form [formGroup]="fg" (ngSubmit)="onSave()">
+            <ion-item lines="full" color="tertiary">
+                <ion-label position="stacked">ชื่อผู้รับเงิน
+                </ion-label>
+                <ion-input type="text" formControlName="name" readonly></ion-input>
+            </ion-item>
+            <ion-item lines="full" color="tertiary">
+                <ion-label position="stacked">เบอร์ติดต่อ
+                </ion-label>
+                <ion-input type="tel" formControlName="phoneNumber" readonly></ion-input>
+            </ion-item>
+            <ion-item lines="full" color="tertiary">
+                <ion-label position="stacked">จำนวนเงิน
+                </ion-label>
+                <ion-input type="number" formControlName="amount" readonly></ion-input>
+            </ion-item>
+            <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">ยืนยัน
+            </ion-button>
+        </form>
+    </ion-list>
+
+</ion-content>
